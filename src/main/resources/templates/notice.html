@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script src="/js/includeHTML.js"></script>
+</head>
+<body>
+
+<header include-html="/global_header.html"></header>
+
+<section>
+    <div id="board_header">
+        <h3>
+            <a href="/notice">
+                <p th:text="${data} + ' 게시판'" ></p>
+            </a>
+        </h3>
+        <hr>
+    </div>
+    <div id="bd_list">
+
+    </div>
+
+</section>
+
+<footer>
+    <h2>Footer 영역</h2>
+</footer>
+</body>
+</html>
