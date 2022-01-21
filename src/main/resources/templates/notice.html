@@ -3,30 +3,22 @@
 <head>
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
-    <script src="/js/includeHTML.js"></script>
 </head>
 <body>
-
-<header include-html="/global_header.html"></header>
-
+<header th:replace="fragments/common :: header">-- thymeleaf header will be inserted here. --</header>
 <section>
     <div id="board_header">
         <h3>
             <a href="/notice">
-                <p th:text="${data} + ' 게시판'" ></p>
+                <p th:text="${data}" ></p>
             </a>
         </h3>
         <hr>
     </div>
     <div id="bd_list">
-
+        <p>board posts will be listed here</p>
     </div>
-
 </section>
-
-<footer>
-    <h2>Footer 영역</h2>
-</footer>
+<footer th:replace="fragments/common :: footer">-- thymeleaf footer will be inserted here. --</footer>
 </body>
 </html>
